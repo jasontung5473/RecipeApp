@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".j.ui.RecipeDetailActivity">
+
+    <ImageView
+        android:id="@+id/imageView_ic_back"
+        android:layout_width="@dimen/back_image_width_height"
+        android:layout_height="@dimen/back_image_width_height"
+        android:layout_marginStart="@dimen/back_image_width_marginStart"
+        android:layout_marginTop="@dimen/back_image_width_marginTop"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_arrow_back_24"
+        android:contentDescription="@string/backbutton" />
+
+    <TextView
+        android:id="@+id/textView_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/bar_title_text_marginTop"
+        android:layout_marginStart="@dimen/bar_title_text_marginStart"
+        android:text="@string/recipe_detail_title"
+        android:textSize="@dimen/bar_title_text_size"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@id/imageView_ic_back"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView_ic_delete"
+        android:layout_width="@dimen/delete_imageButton_width_height"
+        android:layout_height="@dimen/delete_imageButton_width_height"
+        android:layout_marginEnd="@dimen/delete_imageButton_marginEnd"
+        android:layout_marginTop="@dimen/delete_imageButton_marginTop"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_baseline_delete_24"
+        android:contentDescription="@string/delete_button" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab_create_recipe"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end|bottom"
+        android:layout_margin="@dimen/floatingButton_margin"
+        android:src="@drawable/ic_baseline_edit_24"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:contentDescription="@string/edit_recipe" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView_title">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:orientation="vertical">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/recipe_detail_card"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/recipe_detail_card_height"
+                android:elevation="@dimen/elevation"
+                app:cardCornerRadius="@dimen/image_card_cornerRadius">
+
+                <ImageView
+                    android:id="@+id/recipe_detail_imageView"
+                    android:layout_width="fill_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:scaleType="fitXY"
+                    android:contentDescription="@string/recipe_image" />
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:id="@+id/recipe_name_textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/recipe_name_marginTop"
+                android:text="@string/recipe_name_text"
+                android:textColor="@color/black"
+                android:textSize="@dimen/recipe_name_textSize" />
+
+            <TextView
+                android:id="@+id/recipe_type_textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/select_recipe_type_textView"
+                android:textSize="@dimen/create_recipe_text_size" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/recipeIngredients_editText_layout"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/recipeIngredients_text_marginTop"
+                android:hint="@string/recipeDetail_ingredients_text"
+                android:textColorHint="@color/gray">
+
+                <EditText
+                    android:id="@+id/recipeIngredient_editTextTextMultiLine"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:paddingBottom="@dimen/recipeIngredients_et_paddingBottom"
+                    android:gravity="start|top"
+                    android:inputType="textMultiLine" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/recipeStep_editText_layout"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/recipeStep_layout_marginTop"
+                android:hint="@string/recipeDetail_step_text"
+                android:textColorHint="@color/gray">
+
+                <EditText
+                    android:id="@+id/recipeStep_editTextTextMultiLine"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="start|top"
+                    android:paddingBottom="@dimen/recipeStep_et_paddingBottom"
+                    android:textColor="@color/black"
+                    android:layout_marginBottom="@dimen/recipeStep_et_marginBottom"
+                    android:inputType="textMultiLine" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

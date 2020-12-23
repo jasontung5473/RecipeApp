@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="splash_title_text_size">40sp</dimen>
+    <dimen name="recipeType_title_text_size">30sp</dimen>
+    <dimen name="next_btn_size">40dp</dimen>
+    <dimen name="create_recipe_text_size">15sp</dimen>
+    <dimen name="back_image_width_height">20dp</dimen>
+    <dimen name="back_image_width_marginStart">20dp</dimen>
+    <dimen name="back_image_width_marginTop">32dp</dimen>
+    <dimen name="bar_title_text_marginTop">28dp</dimen>
+    <dimen name="bar_title_text_marginStart">25dp</dimen>
+    <dimen name="bar_title_text_size">20sp</dimen>
+    <dimen name="fill_out_textSize">20sp</dimen>
+    <dimen name="fill_out_marginTop">18dp</dimen>
+    <dimen name="fill_out_marginStart">20dp</dimen>
+    <dimen name="create_image_card_width">100dp</dimen>
+    <dimen name="create_image_card_height">100dp</dimen>
+    <dimen name="image_card_cornerRadius">10dp</dimen>
+    <dimen name="recipe_name_editText_marginStart">10dp</dimen>
+    <dimen name="create_spinner_height">50dp</dimen>
+    <dimen name="elevation">4dp</dimen>
+    <dimen name="recipeIngredients_layout_marginTop">5dp</dimen>
+    <dimen name="recipeIngredients_et_paddingBottom">30dp</dimen>
+    <dimen name="recipeStep_layout_marginTop">5dp</dimen>
+    <dimen name="recipeStep_et_paddingBottom">50dp</dimen>
+    <dimen name="done_buttom_marginTopBottom">20dp</dimen>
+    <dimen name="delete_imageButton_width_height">25dp</dimen>
+    <dimen name="delete_imageButton_marginEnd">20dp</dimen>
+    <dimen name="delete_imageButton_marginTop">28dp</dimen>
+    <dimen name="floatingButton_margin">16dp</dimen>
+    <dimen name="recipe_detail_card_height">200dp</dimen>
+    <dimen name="recipe_name_textSize">30sp</dimen>
+    <dimen name="recipe_name_marginTop">5dp</dimen>
+    <dimen name="recipeIngredients_text_marginTop">5dp</dimen>
+    <dimen name="recipeStep_et_marginBottom">50dp</dimen>
+    <dimen name="main_hey_text_marginStart">20dp</dimen>
+    <dimen name="main_hey_text_marginTop">28dp</dimen>
+    <dimen name="main_hey_textSize">25sp</dimen>
+    <dimen name="main_spinner_height">50dp</dimen>
+    <dimen name="main_spinner_margin_left_right">20dp</dimen>
+    <dimen name="main_spinner_marginTop">10dp</dimen>
+    <dimen name="main_recyclerView_margin">20dp</dimen>
+    <dimen name="splash_title_text_marginTop">250dp</dimen>
+    <dimen name="splash_icon_width_height">100dp</dimen>
+    <dimen name="progress_dialog_text_marginStart">10dp</dimen>
+    <dimen name="progress_dialog_textSize">20sp</dimen>
+    <dimen name="list_item_card_marginTop">5dp</dimen>
+    <dimen name="list_item_card_height">160dp</dimen>
+    <dimen name="list_item_name_textSize">15sp</dimen>
+
+
+</resources>

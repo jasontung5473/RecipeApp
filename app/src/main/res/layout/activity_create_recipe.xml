@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".j.ui.CreateRecipe">
+
+    <ImageView
+        android:id="@+id/imageView_ic_back"
+        android:layout_width="@dimen/back_image_width_height"
+        android:layout_height="@dimen/back_image_width_height"
+        android:layout_marginStart="@dimen/back_image_width_marginStart"
+        android:layout_marginTop="@dimen/back_image_width_marginTop"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_arrow_back_24"
+        android:contentDescription="@string/backbutton" />
+
+    <TextView
+        android:id="@+id/create_textView_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/bar_title_text_marginTop"
+        android:layout_marginStart="@dimen/bar_title_text_marginStart"
+        android:text="@string/create_recipe_title"
+        android:textSize="@dimen/bar_title_text_size"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@id/imageView_ic_back"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/fill_out_textView_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/fill_out_text"
+        android:textSize="@dimen/fill_out_textSize"
+        android:layout_marginTop="@dimen/fill_out_marginTop"
+        android:layout_marginStart="@dimen/fill_out_marginStart"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/imageView_ic_back"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/fill_out_textView_title">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:orientation="horizontal">
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/recipe_image_card"
+                    android:layout_width="@dimen/create_image_card_width"
+                    android:layout_height="@dimen/create_image_card_height"
+                    android:elevation="@dimen/elevation"
+                    app:cardCornerRadius="@dimen/image_card_cornerRadius">
+
+                    <ImageView
+                            android:id="@+id/recipe_photo_imageView"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/ic_baseline_image_24"
+                            android:contentDescription="@string/select_image" />
+
+                </androidx.cardview.widget.CardView>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/recipeName_editText_layout"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="@dimen/recipe_name_editText_marginStart"
+                    android:hint="@string/recipe_name_text"
+                    android:textColorHint="@color/gray">
+
+                    <EditText
+                        android:id="@+id/recipeName_editText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="text"
+                        android:maxLength="60"
+                        android:lines="1" />
+                </com.google.android.material.textfield.TextInputLayout>
+            </LinearLayout>
+
+
+            <TextView
+                android:id="@+id/recipe_type_textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="@string/select_recipe_type_textView"
+                android:textSize="@dimen/create_recipe_text_size" />
+
+            <Spinner
+                android:id="@+id/create_recipe_type_spinner"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/create_spinner_height"
+                android:background="@drawable/spinner"
+                android:elevation="@dimen/elevation" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/recipeIngredients_editText_layout"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/recipeIngredients_layout_marginTop"
+                android:hint="@string/recipe_ingredients_text"
+                android:textColorHint="@color/gray">
+
+                <EditText
+                    android:id="@+id/recipeIngredient_editTextTextMultiLine"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="@dimen/recipeIngredients_et_paddingBottom"
+                    android:gravity="start|top"
+                    android:maxLength="1000"
+                    android:inputType="textMultiLine" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/recipeStep_editText_layout"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/recipeStep_layout_marginTop"
+                android:hint="@string/recipe_step_text"
+                android:textColorHint="@color/gray">
+
+                <EditText
+                    android:id="@+id/recipeStep_editTextTextMultiLine"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="start|top"
+                    android:maxLength="1500"
+                    android:paddingBottom="@dimen/recipeStep_et_paddingBottom"
+                    android:inputType="textMultiLine" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <Button
+                android:id="@+id/done_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center|bottom"
+                android:layout_marginTop="@dimen/done_buttom_marginTopBottom"
+                android:layout_marginBottom="@dimen/done_buttom_marginTopBottom"
+                android:text="@string/done_buttton_text" />
+        </LinearLayout>
+
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
