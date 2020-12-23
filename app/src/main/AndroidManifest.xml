@@ -18,15 +18,13 @@
         <activity android:name=".j.ui.CreateRecipe" />
         <activity
             android:name=".j.ui.SplashActivity">
-
-        </activity>
-        <activity android:name=".j.ui.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".j.ui.MainActivity"/>
     </application>
 
 </manifest>
